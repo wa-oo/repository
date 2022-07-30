@@ -1,6 +1,10 @@
 // 引入导航栏
 const head = require('./config/head')
 
+const navbar = require('./config/navbar')
+
+const invest = require('./config/sidebar/invest')
+
 // 默认主题
 const { defaultTheme } = require('@vuepress/theme-default')
 
@@ -15,5 +19,9 @@ module.exports = {
     lastUpdated: true, // 是否启用最近更新时间戳
     lastUpdatedText: '上次更新', // 最后更新时间戳标签的文字
     backToHome: '返回首页！', // 404页面返回首页链接的文字
+    navbar: navbar,
+    sidebar: {
+      '/投资': invest
+    }
   })
 }
